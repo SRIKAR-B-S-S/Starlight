@@ -1,0 +1,16 @@
+.bg {
+    margin: 0;
+    background: #151515;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: solid 1px rgb(149, 149, 149);
+    height: 50px;
+    background-color: #000000;
+}
+
+.title {
+    color: #43ff1d
+}
