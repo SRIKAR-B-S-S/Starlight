@@ -1,4 +1,5 @@
 .bg {
+    overflow: hidden;
     margin: 0;
     background: #151515;
 }
@@ -28,4 +29,17 @@
     margin-top: 40px;
     color: #a1a1a1;
     font-family: 'Segoe UI', sans-serif;
+}
+
+.textarea {
+    margin-top: 7px;
+    margin-left: 3px;
+    border: none; /* removes the slight border of the textarea, which is previously visible when the user is not typing in the textarea*/
+    outline: none; /* doesn't let the textarea show the outline when the user is typing in it*/
+    background-color: #151515;
+    color: #a1a1a1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
 }
