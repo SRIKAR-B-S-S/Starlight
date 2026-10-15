@@ -43,3 +43,22 @@
     height: 100vh;
     width: 100vw;
 }
+
+.saved-box {
+    font-family: 'MS Gothic';
+    position: fixed;
+    display: flex;
+    align-items: center;
+    bottom: 40px;
+    right: 125px;
+    background-color: #424242;
+    color: whitesmoke;
+    height: 30px;
+    width: 67px;
+    visibility: hidden;
+    border-radius: 3px;
+}
+
+.saved-box.show {
+    visibility: visible;
+}

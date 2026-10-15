@@ -25,7 +25,7 @@ function setTimeStamp() { //will set the timestamp of when the notes was edited 
            timestamp.textContent = `Last edited: ${formatPrevTime}`; //if yes, it will display only the time..
         }
         else if (date !== formatPrevDate) { //if no, then it will display both date and time because the last edited day is not today, so you have to know the date.
-            timestamp.textContent = `lastEdited ${prevStamp}`;  //saves the timestamp to localStorage(with time and date separated by a '-')
+            timestamp.textContent = `Last edited: ${prevStamp}`;  //saves the timestamp to localStorage(with time and date separated by a '-')
         }
 }
 
@@ -36,7 +36,18 @@ if (content) { //saves the content as the user types
     });
 }
 
+const savedDialog = document.getElementById('saved-dialog');
+
 window.addEventListener('keydown', (e) => { //Added some hotkeys below! For the ease of using Starlight for people who don't use their mouse much
+
+    if (e.ctrlKey && e.key === 's' )  { // Added a listener for 'Ctrl + S' to take care the reflexes of many people, take me for example, I always use it right after completing every sentence!
+        e.preventDefault();
+        savedDialog.classList.add('show');
+        setTimeout(() => {
+            savedDialog.classList.remove('show');
+        }, 500);
+        
+    }
 
     if (e.key.toLowerCase() === 's') { //S was choosen as it is the initial letter of Starlight
         if (content !== document.activeElement) { //when S is pressed, the textarea gets the focus and the user can immediately start typing
