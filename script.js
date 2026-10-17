@@ -60,3 +60,23 @@ window.addEventListener('keydown', (e) => { //Added some hotkeys below! For the 
         content.blur();
     }
 });
+// By default the horro sound is paused and when the user presses on the haloween pumpkin, the horror sound will start
+const pumpkin = document.getElementById('pumpkin');
+let Isplaying = false;
+const horrorSound = new Audio('./assets/horror-sound.mp3');
+horrorSound.loop = true;
+
+function toggleAudio() { //this function is triggered when teh user presses on the pumpkin image
+    if (Isplaying) { //if the audio is already playing then it will stop
+        Isplaying = false;
+        pumpkin.classList.remove('playing');
+        pumpkin.classList.add('paused');
+        horrorSound.pause();
+    } 
+    else {  //if the audio is paused, then it will play
+        Isplaying = true;
+        pumpkin.classList.remove('paused');
+        pumpkin.classList.add('playing');
+        horrorSound.play();
+    }
+}

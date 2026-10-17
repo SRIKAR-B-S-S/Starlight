@@ -42,6 +42,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+    caret-color: rgb(97, 38, 38);
 }
 
 .saved-box {
@@ -61,4 +62,18 @@
 
 .saved-box.show {
     visibility: visible;
+}
+
+.togglePumpkin {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.pumpkin.playing { /*a white filled img while playing*/
+    content: url(./assets/pumpkin-playing.png);
+}
+
+.pumpkin.paused { /*a white outlined image when paused*/
+    content: url(./assets/pumpkin-paused.png);
 }
