@@ -77,3 +77,27 @@
 .pumpkin.paused { /*a white outlined image when paused*/
     content: url(./assets/pumpkin-paused.png);
 }
+
+.random-horror-msgs {
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
+    background-color: #a5a5a5;
+    color: rgb(49, 49, 49);
+    border-radius: 4px;
+    visibility: hidden;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.random-horror-msgs.show {
+    visibility: visible;
+}
+
+.random-message {
+    font-family: 'Shadows Into Light';
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}

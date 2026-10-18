@@ -80,3 +80,38 @@ function toggleAudio() { //this function is triggered when teh user presses on t
         horrorSound.play();
     }
 }
+
+const randomMessages = [ //set of random horrorful messages
+    'Is anyone reading this? My notes are being modified!',
+    'Wait! Those aren\'t my words!',
+    'save-us! Connection lost at 0x0042',
+    'Message: Help me! I\'m lost',
+    'IMP: Don\'t close this site! (Not to be ignored)',
+    'I thought I was the only one using this site...',
+    'I wish I had not opened Starlight :(',
+    'Pray that I should\'t come in your dreams tonight'
+];
+
+const random_messageDiv = document.getElementById('random-horror-msgs');
+const random_messageP = document.getElementById('random-message');
+
+function getRandomDelay(minseconds, maxseconds) { //input of min&max seconds, which will then be converted to milliseconds
+    const min_ms = minseconds * 1000;
+    const max_ms = maxseconds* 1000;
+    return Math.floor(Math.random() * (max_ms - min_ms)) + min_ms; //select random delay from the given min and max seconds and then round it off
+}
+
+function displayHorrorMsg() { //function which will display one random horror message from the above list of horror message in random intervals of time to the user , to scare him!
+    const randomDelay = getRandomDelay(180, 480); // will create the random delay time between 180s and 480s ie. 3min to 8min
+    setTimeout(() => {
+        random_messageP.textContent = randomMessages[Math.floor(Math.random() * randomMessages.length)]; //select random message from the above list.
+        random_messageDiv.classList.add('show');
+        setTimeout(() => {
+            random_messageDiv.classList.remove('show');
+            displayHorrorMsg();
+        }, 3000); // will display the horror message for 3s
+        
+    }, randomDelay);    
+}
+
+displayHorrorMsg();

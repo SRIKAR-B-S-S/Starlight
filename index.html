@@ -6,7 +6,8 @@
     <link rel="icon" type="image/x-icon" href="./assets/starlight-logo.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&display=swap" rel="stylesheet"> <!--Font for Starlight title-->
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet"> <!--Font for Horror Message -->
 </head>
 <body class="bg">
 <div class="top-bar">
@@ -24,6 +25,10 @@
 
 <div class="togglePumpkin"> <!--a pumpkin for toggling the horror sound in the bg-->
     <img style="height: 24px; width: 24px;" class="pumpkin paused" onclick="toggleAudio()" id="pumpkin" title="Press to toggle horror sound"> <!--used the title attribute for the tooltip-->
+</div>
+
+<div class="random-horror-msgs" id="random-horror-msgs"> <!-- A div which will display random horror messages(refer JS)-->
+    <p id="random-message" class="random-message"></p>
 </div>
 
 <script src="script.js"></script>
