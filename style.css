@@ -43,6 +43,11 @@
     height: 100vh;
     width: 100vw;
     caret-color: rgb(97, 38, 38);
+    filter: none;
+}
+
+.textarea.blur { /*will blur the textarea*/
+    filter: blur(2px);
 }
 
 .saved-box {

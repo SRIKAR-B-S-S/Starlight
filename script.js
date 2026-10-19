@@ -115,3 +115,15 @@ function displayHorrorMsg() { //function which will display one random horror me
 }
 
 displayHorrorMsg();
+
+window.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') { // blur the textarea when holding down the Esc key, using the blur class
+        if (event.repeat) {
+            content.classList.add('blur');
+        }
+    }
+});
+
+window.addEventListener('keyup', (event) => { //whenever there's a keyup, remove the blur
+    content.classList.remove('blur');
+});
