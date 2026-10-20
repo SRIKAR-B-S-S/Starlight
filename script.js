@@ -127,3 +127,21 @@ window.addEventListener('keydown', (event) => {
 window.addEventListener('keyup', (event) => { //whenever there's a keyup, remove the blur
     content.classList.remove('blur');
 });
+
+const away_from_starlightMSGS = [ // a set of messages which will be displayed when the user is not active on the Starlight tab
+    'Don\'t leave me',
+    'Where did you go?',
+    'I\'m still watching you...',
+    'You can\'t escape me',
+    'I can still haunt you in your dreams',
+    'All eyes on you!!'
+];
+
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState !== 'visible') { //will display a random msg out of the above ones if the user has shifted to another tab
+        document.title = away_from_starlightMSGS[Math.floor(Math.random() * away_from_starlightMSGS.length)]
+    }
+    else {
+        document.title = 'Starlight' //remvoe the msg as soon as the user comes back to Starlight
+    }
+});

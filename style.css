@@ -2,6 +2,7 @@
     overflow: hidden;
     margin: 0;
     background: #151515;
+    cursor: url('./assets/spider-pointer.png'), auto;
 }
 
 .top-bar {
@@ -44,6 +45,7 @@
     width: 100vw;
     caret-color: rgb(97, 38, 38);
     filter: none;
+    cursor: url('./assets/spider-pointer.png'), auto;
 }
 
 .textarea.blur { /*will blur the textarea*/
