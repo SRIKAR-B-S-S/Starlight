@@ -1,19 +1,25 @@
+ :root { /* add colour which will change acc to the theme */
+    --topbar-border: rgb(149, 149, 149);
+    --topbar-bg: #00000091;
+    --website-bg:  #151515;
+    --text-color: #a1a1a1;
+}
+
 .bg {
     overflow: hidden;
     margin: 0;
-    background: #151515;
-    cursor: url('./assets/spider-pointer.png'), auto;
+    background: var(--website-bg);
 }
 
 .top-bar {
     display: flex;
     justify-content: space-between;
-    border-top: solid 1.5px rgb(149, 149, 149);
-    border-bottom: solid 2.5px rgb(149, 149, 149);
-    border-left: solid 1.5px rgb(149, 149, 149);
-    border-right: solid 1.5px rgb(149, 149, 149);
+    border-top: solid 1.5px var(--topbar-border);
+    border-bottom: solid 2.5px var(--topbar-border);
+    border-left: solid 1.5px var(--topbar-border);
+    border-right: solid 1.5px var(--topbar-border);
     height: 63px;
-    background-color: #00000091;
+    background-color: var(--topbar-bg);
 }
 
 .title {
@@ -28,7 +34,7 @@
     margin-right: 12px;
     font-size: 13px;
     margin-top: 40px;
-    color: #a1a1a1;
+    color: var(--text-color);
     font-family: 'Segoe UI', sans-serif;
 }
 
@@ -37,15 +43,15 @@
     margin-left: 3px;
     border: none; /* removes the slight border of the textarea, which is previously visible when the user is not typing in the textarea*/
     outline: none; /* doesn't let the textarea show the outline when the user is typing in it*/
-    background-color: #151515;
-    color: #a1a1a1;
+    background-color: var(--website-bg);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
     width: 100vw;
     caret-color: rgb(97, 38, 38);
+    caret-shape: block; /* added a block shaped text cursor */
     filter: none;
-    cursor: url('./assets/spider-pointer.png'), auto;
 }
 
 .textarea.blur { /*will blur the textarea*/
@@ -107,4 +113,10 @@
     font-weight: bold;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.toggle-mode {
+    position: absolute;
+    top: 10px;
+    right: 45px;
 }

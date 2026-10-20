@@ -129,7 +129,7 @@ window.addEventListener('keyup', (event) => { //whenever there's a keyup, remove
 });
 
 const away_from_starlightMSGS = [ // a set of messages which will be displayed when the user is not active on the Starlight tab
-    'Don\'t leave me',
+    'Don\'t leave me..',
     'Where did you go?',
     'I\'m still watching you...',
     'You can\'t escape me',
@@ -145,3 +145,28 @@ document.addEventListener('visibilitychange', () => {
         document.title = 'Starlight' //remvoe the msg as soon as the user comes back to Starlight
     }
 });
+
+let mode = 'shadow'; //initially, I want charcoal mode so I will set the mode to 'shadow' and then use toggle mode
+
+function toggleMode() { //will be triggered when the spider web icon is pressed
+    if (mode === 'shadow') { //if the mode is shadow, switch to dark
+        mode = 'dark';
+        document.documentElement.style.setProperty('--topbar-border', 'rgb(149, 149, 149)');
+        document.documentElement.style.setProperty('--topbar-bg', '#00000091');
+        document.documentElement.style.setProperty('--website-bg', '#151515');
+        document.documentElement.style.setProperty('--text-color', '#a1a1a1');
+        document.body.style.cursor = 'url(./assets/spider-pointer.png), auto';
+        content.style.cursor = 'url(./assets/spider-pointer.png), auto';
+    }
+    else { //if the mode is dark, switch to shadow
+        mode = 'shadow';
+        document.documentElement.style.setProperty('--topbar-bg', 'rgb(66, 65, 65)');
+        document.documentElement.style.setProperty('--website-bg', 'rgb(100, 100, 100)');
+        document.documentElement.style.setProperty('--topbar-border', '#282828');
+        document.documentElement.style.setProperty('--text-color', '#efefef');
+        document.body.style.cursor = 'url(./assets/bat-pointer.png), auto';
+        content.style.cursor = 'url(./assets/bat-pointer.png), auto';
+    }
+}
+
+toggleMode();
