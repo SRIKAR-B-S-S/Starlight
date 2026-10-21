@@ -147,6 +147,7 @@ document.addEventListener('visibilitychange', () => {
 });
 
 let mode = 'shadow'; //initially, I want charcoal mode so I will set the mode to 'shadow' and then use toggle mode
+const title = document.getElementById('title');
 
 function toggleMode() { //will be triggered when the spider web icon is pressed
     if (mode === 'shadow') { //if the mode is shadow, switch to dark
@@ -155,6 +156,8 @@ function toggleMode() { //will be triggered when the spider web icon is pressed
         document.documentElement.style.setProperty('--topbar-bg', '#00000091');
         document.documentElement.style.setProperty('--website-bg', '#151515');
         document.documentElement.style.setProperty('--text-color', '#a1a1a1');
+        document.documentElement.style.setProperty('--caret-color', 'rgb(97, 38, 38)');
+        title.classList.remove('shadow');
         document.body.style.cursor = 'url(./assets/spider-pointer.png), auto';
         content.style.cursor = 'url(./assets/spider-pointer.png), auto';
     }
@@ -164,6 +167,8 @@ function toggleMode() { //will be triggered when the spider web icon is pressed
         document.documentElement.style.setProperty('--website-bg', 'rgb(100, 100, 100)');
         document.documentElement.style.setProperty('--topbar-border', '#282828');
         document.documentElement.style.setProperty('--text-color', '#efefef');
+        document.documentElement.style.setProperty('--caret-color', 'rgb(80, 75, 67)');
+        title.classList.add('shadow');
         document.body.style.cursor = 'url(./assets/bat-pointer.png), auto';
         content.style.cursor = 'url(./assets/bat-pointer.png), auto';
     }

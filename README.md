@@ -13,3 +13,6 @@ I used HTML, CSS and JS for developing Starlight. The website's frontend is base
 
 ## Where I struggled and what I enjoyed
 I struggled to implement the feature where I thought of displaying only the time in the timestamp if the note was last editedon the same day whereas it should display the date and time in the timestamp if the the notes was edited on the previous day. Such as if I have last edited my notes this morning then it should show me only the time and when I check it the next day it should display the time along with the date. Though I really enjoyed brainstorming for adding the spooky features, especially while writing the horrorful messsages!
+
+## AI Declaration
+No AI usage

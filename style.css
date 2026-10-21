@@ -3,6 +3,7 @@
     --topbar-bg: #00000091;
     --website-bg:  #151515;
     --text-color: #a1a1a1;
+    --caret-color: rgb(97, 38, 38);
 }
 
 .bg {
@@ -30,6 +31,15 @@
     font-family: 'Bitcount Ink';
 }
 
+.title.shadow { /* font and styles which will match with the Shadow theme*/
+    font-family: 'Handjet'; 
+    color: #1f1f1f;
+    font-size: 53px;
+    margin-left: 15px;
+    font-weight: 700;
+    letter-spacing: +1px;
+}
+
 .time-stamp {
     margin-right: 12px;
     font-size: 13px;
@@ -49,7 +59,7 @@
     flex-direction: column;
     height: 100vh;
     width: 100vw;
-    caret-color: rgb(97, 38, 38);
+    caret-color: var(--caret-color);
     caret-shape: block; /* added a block shaped text cursor */
     filter: none;
 }
